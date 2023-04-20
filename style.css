@@ -1,0 +1,376 @@
+/*Removing empty space around the page*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*setting font style and base font weight*/
+a, button, nav, h1, h2, h3, p, footer {
+    font-family: 'Economica', sans-serif;
+    font-weight: 400;
+}
+
+/*Changing font weight for headings (h1)*/
+h1{
+    font-weight: 600;
+}
+
+/*Creating the footer and setting it at the bottom of the page. Selecting colour for light green. <height> sets the height to get more space around the captions. Aligning and justifying the text to the centre. <Width> 100% stretch the footer to both sides of the screen */
+footer {
+    background-color: #a2c67b;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    user-select: none;
+}
+
+/*placing the navigation in the lower part of the HOME page. Adding smooth shadow around the navigation. <Width> 100% stretch the footer to both sides of the screen. */
+.navigation-home {
+    box-shadow: 0px 10px 100px 0px rgba(47, 47, 47, 0.5);
+    z-index: 100;
+    position: fixed;
+    bottom: 5vh;
+    width: 100%;
+}
+
+/*placing the navigation in the lower part of the VIDEO and PHOTO pages. The sticky position allows the navi bar to follow the scrolling down by sticking to the top(0) of the site. Adding smooth shadow around the navigation. <Width> 100% stretch the footer to both sides of the screen. Transition when the page opens. <z-index> is set to 100 to place the navigation above all elements. */
+.navigation {
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 10px 100px 0px rgba(47, 47, 47, 0.5);
+    z-index: 100;
+    transition: all ease-in-out 300ms;
+}
+
+/*This part of the code removing style from the list, setting the tabs to the center of the navigation bar. changing the background for the white colour.*/
+.nav_links ul {
+    display: flex;
+    list-style: none;
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Allowing the navigation to change to vertical when the width of device/screen is lower than 700px.*/
+@media screen and (max-width: 700px) {
+    .nav_links ul {
+        flex-direction: column;
+    }
+}
+
+/*Blocking display of the elements from the navi bar, giving them more space around (30px padding). Removing decoration from <a> such as underline and blueish colour. Adding transition of the elements, duration 0.1s. Increasing the font size using 2em value.*/
+.nav_links a {
+    display: block;
+    padding: 30px;
+    color: #000000;
+    text-decoration: none;
+    transition: ease-in-out .1s;
+    font-size: 2em;
+}
+
+/*This command is changing the colour of the background and letters when hovering each navi bar element.*/
+.nav_links a:hover {
+    background-color: #a2c67b;
+    color: white;
+}
+
+/*This part adds a separate line into the navigation for social medai links or future ABOUT and CONTACT pages. Colour of the backround was set to green and the content was centred by changing the <display> and <justify-content> .*/
+#social_media {
+    background-color: #a2c67b;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*adding more space for the SM icons*/
+#social_media a {
+    padding: 10px;
+}
+
+/*Setting the icons' height to 20px*/
+.sm_icon img {
+    height: 20px;
+}
+
+/*This command changes the icons' colour when hovering to black by inverting its original colour (white)*/
+#social_media .sm_icon:hover {
+    filter: invert(1);
+}
+
+/*Adding the background image. Setting it to the centre, blocking the repeating option and setting the size of the image to cover whole designated space. Changing the space for the image to the screen by selecting the <width> to 100% and locking the <height> to 500px. <Z-index> is set to -1 to push the backgroung image to the back.*/
+.background-img {
+    background-image: url("img/bg-photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    height: 500px;
+    width: 100%;
+    z-index: -1;
+}
+
+/*This command again is adding the background iamge, but only for the HOME page. One element was changed, the <height> was set to 95vh to fill more space of the page.*/
+.background-img-home {
+    background-image: url("img/bg-photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    z-index: -1;
+}
+
+/*Adding style to the portfolio name, by increasing its size, changing the font style, changing the colour and increasing gaps between the letters to 20px */
+#portfolio-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10em;
+    color: #ffffff;
+    letter-spacing: 20px;
+}
+
+/*This one changes the text style by removing colour from the letters and adding the stroke for them. Moreover, the elements: <-webkit...> <-moz...> <-ms...> are allowing different browsers to read and change the appearance of the Portfolio titles */
+#portfolio-title {
+    -webkit-text-stroke: 1px #ffffff;
+    -moz-text-stroke: 1px #ffffff;
+    -ms-text-stroke: 1px #ffffff;
+    color: transparent;
+    font-size: 3em;
+    letter-spacing: 20px;
+    margin: -20px;
+}
+
+/*The portfolio name and title was set to the centre of the page. Due to connection of the text (<a>) to the HOME page the decoration of it was removed by using the <text-decoration: none;>.  Moreover the selection of the text was turned off to get the feeling that the title is close to a logo style. */
+#portfolio-name, #portfolio-title {
+    text-decoration: none;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    user-select: none;
+}
+
+/*It sets the title of the HOME page in the center of the background image, and allows the word to be under each other. Transition was added.*/
+#JTM-home {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+/*It sets the title of the pages in the center of the background image, and allows the word to be under each other. Transition was added. The title was set to absolute position to allow it to be showed above the background image*/
+#JTM {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+
+/*It allows to highlight on which page the user is (which page is active). Changing the colour of the background and text. */
+.active {
+    background-color: #a2c67b;
+    color: white;
+}
+
+/*The class container1 is made to set the minimum height of the section with images and videos, to give them more space. Sets the elements in the centre of the division. The background colour was changed to match to the style.  */
+.container1 {
+    position: relative;
+    min-height: 90vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+/*This part organise the elements in the division and allows them to wrap when shrinking the window or when the size of the screen is smaller and centre the images.*/
+.container1 .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1400px;
+}
+
+/*this sets the size of each image. Adding the shadow outside the box. Hides overflow. Changes the cursour to poitner, to give feeling that element is clickable. Removing possibility to select the texts. Gives space around each .image*/
+.image-container .image {
+    height: 225px;
+    width: 400px;
+    box-shadow: 0px 10px 50px 0px rgba(47, 47, 47, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: -20px;
+    position: relative;
+    user-select: none;
+    margin:20px;
+}
+
+/* (cms-Comming soon) adding the siz of boxes which contains the "cooming soon..." text. Removing the text selection option. .image-cms allows the text inside to be diffrent than in the .image. Gives space around each .image-cms*/
+.image-container .image-cms {
+    height: 225px;
+    width: 400px;
+    box-shadow: 0px 10px 50px 0px rgba(47, 47, 47, 0.5);
+    overflow: hidden;
+    margin-bottom: -20px;
+    position: relative;
+    user-select: none;
+    margin: 20px;
+}
+
+/*Setting the size of the image inside of the small box. adding a transition.*/
+.image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.1s linear;
+}
+
+/*Setting the size of the video's image inside of the small box. adding a transition.*/
+.image-container .image video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.1s linear;
+}
+
+/*Giving some animation when hovering the image or video*/
+.image-container .image:hover img,.image-container .image:hover video {
+    transform: scale(1.1);
+}
+
+/*Changing the size of text when hovering the image or video.*/
+.image-container .image-cms:hover h3, .image:hover h3 {
+    font-size: 1.3em;
+    transition: 0.1s linear;
+}
+
+/*Setting the "comming soon..." to the center of the .image-cms*/
+.image-container .image, .image-container .image-cms{
+    display: flex;
+    justify-content: center;
+}
+
+/*changing the size of the font inside the .image and .image-cms*/
+.image-container{
+    font-size: 1.8em;
+}
+
+/*setting the texts of each .image to a center of each by chaning its position and setting it 50% from the top of the .image, next is transforming it to the center by translate its Y (vertical) position 50%. Therefore in the result its position is in the middle. Setting the colour of the .image to white*/
+.image-container .image h3 {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/*setting the texts of each .image to a center of each by chaning its position. transform(translate(-50%) sets the text in the middle.*/
+.image-container .image-cms h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/*Hides the description of each video or photo. which is shown letter in popup window*/
+.image-container .image .hide {
+    display: none;
+}
+
+/*Fixed position blocks the popup window in one place. Setting its position to fit it in the screen perfectly, adding shadow from the outside of the popup, adding background colour to highlight the displayed content. setting the size of the whole popup to 100% of the screen. Z-index is set to 100 to be displayed as a top layer, above all other elements. Hidding the popup until JS is used. */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 10px 50px 0px rgba(47, 47, 47, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+}
+
+/*adding a cross to allow user to close the popup, setting its position in the right top corner of the page. Disabling the select text option. Font-size increases its size to be easy to click on*/
+span {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 5em;
+    color: black;
+    user-select: none;
+}
+
+/*Setting popping up video's position (to centre) and size on the screen. locking its size to max of 600px in height and more than minimum 250px. Z-index 99 - display above .description */
+.popup video {
+    position: absolute;
+    bottom: 25vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 50vw;
+    max-height: 600px;
+    min-height: 250px;
+    z-index: 99;
+}
+
+/*Setting popping up image's position (to centre) and size on the screen. locking its size to max of 600px in height and more than minimum 250px. Z-index 99 - display above .description */
+.popup img {
+    position: absolute;
+    bottom: 25vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 50vw;
+    max-height: 600px;
+    min-height: 250px;
+    z-index: 99;
+}
+
+/*Setting the heading to the centre and changing the alignment to justify, to equally distribute the text*/
+.description h1{
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+/*setting the note of the origin of the video to the bottom of the description container. Decreasing its size.*/
+.description h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 115px;
+    font-size: 0.8em;
+}
+
+/*Cetting the description in the center of the container. Making some space between heading and <p>*/
+.description p {
+    margin-top: -60px;
+    padding-inline: 20px;
+    padding-bottom: 100px;
+    position: absolute;
+    top: 130px;
+    font-size: 1.2em;
+}
+
+/*Outlining the size of the division which includes popup's description. Setting its position to horizontal centre and alightly over the bottom of the screen*/
+.description {
+    position: absolute;
+    top: 75%;
+    width: 88.5vw;
+    max-width: 1066px;
+    padding-top: 30px;
+    height: 200px;
+    background-color: #fff;
+}
+
+/*Centring(horizontally) the description and setting its z-index to 98 and allow the video or image to be above it (99)*/
+.description-container {
+    display: flex;
+    justify-content: center;
+    z-index: 98;
+}

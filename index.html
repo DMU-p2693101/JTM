@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tycjan Marciniak,motion design,photography,video, motion picture,motion,design,designer, photographer, Jaroslaw, Jarosław, Tycjan">
+    <title>JTM-Portfolio</title>
+
+    <!--adding to the website Economica font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Economica:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--linking with css style sheet-->
+    <link href="style.css" 
+    rel="stylesheet" 
+    type="text/css">
+    
+</head>
+<body>
+
+    <!--This division adds to the page its name, title and adds background image. The title and name is set by CSS above the image-->
+    <!--Whole <div> is linked with Home page-->
+    <div>
+        <div class="background-img-home"></div>
+        <div id="JTM-home">
+            <a id="portfolio-title" href="index.html">PHOTO-VIDEO</a>
+            <a id="portfolio-name" href="index.html">JTM</a>
+            <a id="portfolio-title" href="index.html">PORTFOLIO</a>
+        </div>      
+    </div>    
+
+    <!--Navigation Bar - this is set in few <div> to allow creating few layers which will be treated as separate elements for the user. .navigation keeps all on the same background colour and in the same line. .nav_link adds the separate tabs on the navi bar, which are changed by CSS to be more button like. <a>s are linked with each page-->
+    <div class="navigation-home">
+        <nav class="nav_links"> 
+            <ul>
+                <li><a href="video.html">VIDEO</a></li>
+                <li><a href="photo.html">PHOTO</a></li>
+            </ul>
+        </nav>     
+
+        <!--#social-media creates the line below the main navi bar for social media links. <a>s are linked with facebook and instagram pages. Moreover the contain their icons -->
+        <div id="social_media">
+            <a href="https://instagram.com" class="sm_icon"><img src="img/ig.png" alt="instagram ig"></a>
+            <a href="https://facebook.com" class="sm_icon"><img src="img/fb.png" alt="facebook fb"></a>
+        </div> 
+    </div>
+
+</body>
+
+<!--Footer of the website-->
+<footer>
+    © 2023 by Jaroslaw Tycjan Marciniak
+</footer>  
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+          content="Tycjan Marciniak,motion design,photography,video, motion picture,motion,design,designer, photographer, Jaroslaw, Jarosław, Tycjan">
+    <title>JTM-Portfolio</title>
+
+    <!--adding to the website Economica font-->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Economica:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!--linking with css style sheet-->
+    <link href="style.css"
+          rel="stylesheet"
+          type="text/css">
+
+</head>
+<body>
+
+<!--This division adds to the page its name, title and adds background image. The title and name is set by CSS above the image-->
+<!--Whole <div> is linked with Home page-->
+<div>
+    <div class="background-img"></div>
+    <div id="JTM">
+        <a id="portfolio-title"
+           href="index.html">PHOTO-VIDEO</a>
+        <a id="portfolio-name"
+           href="index.html">JTM</a>
+        <a id="portfolio-title"
+           href="index.html">PORTFOLIO</a>
+    </div>
+</div>
+
+<!--Navigation Bar - this is set in few <div> to allow creating few layers which will be treated as separate elements for the user. .navigation keeps all on the same background colour and in the same line. .nav_link adds the separate tabs on the navi bar, which are changed by CSS to be more button like. <a>s are linked with each page-->
+<div class="navigation">
+    <nav class="nav_links">
+        <ul>
+            <li><a href="video.html">VIDEO</a></li>
+            <li><a href="photo.html"
+                   class="active">PHOTO</a></li>
+        </ul>
+    </nav>
+
+    <!--#social-media creates the line below the main navi bar for social media links. <a>s are linked with facebook and instagram pages. Moreover the contain their icons -->
+    <div id="social_media">
+        <a href="https://instagram.com"
+           class="sm_icon"><img src="img/ig.png"
+                                alt="instagram ig"></a>
+        <a href="https://facebook.com"
+           class="sm_icon"><img src="img/fb.png"
+                                alt="facebook fb"></a>
+    </div>
+</div>
+
+<article>
+    <!--.container1 keeps all images togheter and is edited in CSS-->
+    <div class="container1">
+        <div class="image-container">
+            <!--.image and .image-cms are presenting images hidden in the .poppup. Morover the are organised in css to create grid-->
+            <div class="image">
+                <h3>GIANTS</h3>
+                <img src="img/img1.jpg"
+                     alt="mountains">
+                     <!--heading and paragraph are hidden (.hide) and customised for each image or video. they are activated (shown) by JS-->
+                <h1 class="hide">GIANTS</h1>
+                <p class="hide">TEXT 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <!-- .link allows the <p> to be displayed at the bottom of the description container-->
+                    <p class="hide link">Taken by JTM</p>
+            </div>
+            <div class="image">
+                <h3>THE COLOURS OF SCOTLAND</h3>
+                <img src="img/img2.jpg"
+                     alt="scotland">
+                <h1 class="hide">THE COLOURS OF SCOTLAND</h1>
+                <p class="hide">TEXT 2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p class="hide link">Taken by JTM</p>
+            </div>
+            <div class="image">
+                <h3>LONDON</h3>
+                <img src="img/img3.jpg"
+                     alt="london">
+                <h1 class="hide">LONDON</h1>
+                <p class="hide">TEXT 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p class="hide link">Taken by JTM</p>
+            </div>
+            <div class="image-cms"><h3>COMING SOON...</h3></div>
+            <div class="image-cms"><h3>COMING SOON...</h3></div>
+            <div class="image-cms"><h3>COMING SOON...</h3></div>
+            <div class="image-cms"><h3>COMING SOON...</h3></div>
+            <div class="image-cms"><h3>COMING SOON...</h3></div>
+            <div class="image-cms"><h3>COMING SOON...</h3></div>
+        </div>
+    </div>
+
+    <!--.popup-container keeps whole window which will be shown after clicking each image-->
+    <div class="popup-container">
+        <div class="popup">
+            <!--span will be the closing "X"" to exit from popup-->
+            <span>&times;</span>
+            <!--It gives to JS source where to look for the full images-->
+            <img src="img/img1"
+                 alt="">
+                 <!--It will show in popup the description of each image or video- written above in the .image -->
+            <div class="description-container">
+                <div class="description">
+                    <!--order of the popup description-->
+                    <h1></h1><!--heading-->
+                    <p></p><!--description-->
+                    <h2></h2><!--source-->
+                </div>
+            </div>
+        </div>
+</article>
+
+<!--Footer of the website-->
+<footer>
+    © 2023 by Jaroslaw Tycjan Marciniak
+</footer>
+
+<!--JavaScript-->
+<script>
+
+    //by clicking on .image JS opens the .popup division, it takes the source for each clicked element from img src, into the .popup. Moreover JS is displaying individual description written for each image in the .image
+    document.querySelectorAll('.image-container .image')
+            .forEach(img => {
+                img.onclick = () => {
+                    document.querySelector('.popup').style.display = 'block';
+                    document.querySelector('.popup img').src =
+                        img.querySelector('img').src;
+                    document.querySelector(
+                        '.popup h1').innerHTML =
+                        img.querySelector('h1').innerHTML;
+                    document.querySelector(
+                        '.popup p').innerHTML =
+                        img.querySelector('p').innerHTML;
+                        document.querySelector(
+                        '.popup h2').innerHTML =
+                        img.querySelector('.link').innerHTML;
+                };
+            });
+
+    //the <span> is a closing button (closes .popup)
+    document.querySelector('.popup span').onclick = () => {
+        document.querySelector('.popup').style.display = 'none';
+    };
+</script>
+</body>
+</html>
